@@ -14,3 +14,8 @@ jobs:
 
     steps:
       - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Configure CMake
+        run: cmake -B_build
+      - name: Build project
+        run: cmake --build _build --config Release
